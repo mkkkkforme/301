@@ -1,0 +1,35 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>301</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="robots" content="noindex, nofollow" />
+	<!-- 防止大部分浏览器缓存： -->
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+	<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+	<meta http-equiv="expires" content="-1">
+	<script>
+		var site="https://my.naiping.cyou"
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i = 0; i < vars.length; i++) {
+				var pair = vars[i].split("=");
+				if (pair[0] == variable) {
+					return pair[1];
+				}
+			}
+			return "";
+		}
+
+		if (getQueryVariable('code') != '') {
+			window.location.href=site+"/auth/register?code="+getQueryVariable('code')
+		}else{
+			window.location.href=site+"/auth/register"
+		}
+	</script>
+</head>
+</html>
