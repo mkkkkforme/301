@@ -26,11 +26,10 @@
 		}
 
 		if (getQueryVariable('code') != '') {
-			console.log(getQueryVariable('code'))
-			//window.location.href=site+"/auth/register?code="+getQueryVariable('code')
+			window.location.href=site+"/auth/register?code="+getQueryVariable('code')
+		}else{
+			window.location.href=site+"/auth/register"
 		}
-		console.log('2222')
-		//window.location.href=site+"/auth/register"
 	</script>
 </head>
 </body>
